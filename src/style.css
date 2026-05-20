@@ -1,0 +1,128 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #e67e22;
+    --light: #ecf0f1;
+    --success: #27ae60;
+    --error: #c0392b;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: var(--light);
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #34495e;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: var(--accent);
+}
+
+.banner {
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.event-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--accent);
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-alt { background: #7f8c8d; }
+
+#msg { margin: 10px 0; font-weight: bold; }
+.error-msg { color: var(--error); }
+.success-msg { color: var(--success); }
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .form-group { flex-direction: column; }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: lightgrey;
+}
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background:linear-gradient(darkslateblue,darkslategray);
+}

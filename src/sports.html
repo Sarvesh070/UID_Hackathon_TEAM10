@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Campus Sports Meet 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Campus Sports Meet 2026</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sports.html">Events & Registration</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Available Sports Events</h2>
+        <div id="events-grid" class="grid-container">
+            <!-- Events injected by JS -->
+        </div>
+
+        <section class="registration-form">
+            <h2>Participation Form</h2>
+            <p>Total Participants so far: <span id="participant-count">0</span></p>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <input type="text" id="studentName" placeholder="Full Name" required>
+                    <input type="text" id="regNo" placeholder="Register Number (e.g., BL.SC.U4CSE25014)" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email ID" required>
+                    <input type="text" id="mobile" placeholder="10-digit Mobile" required>
+                </div>
+                <div class="form-group">
+                    <select id="dept">
+                        <option value="">Select Department</option>
+                        <option value="CS">Computer Science</option>
+                        <option value="ME">Mechanical</option>
+                        <option value="EC">Electronics</option>
+                    </select>
+                    <select id="year">
+                        <option value="">Year of Study</option>
+                        <option value="1">I Year</option>
+                        <option value="2">II Year</option>
+                        <option value="3">III Year</option>
+                        <option value="4">IV Year</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="eventSelect" onchange="toggleTeamFields()">
+                        <option value="">Select Event</option>
+                        <!-- Options injected by JS -->
+                    </select>
+                    <select id="participationType" onchange="toggleTeamFields()">
+                        <option value="Individual">Individual</option>
+                        <option value="Team">Team</option>
+                    </select>
+                </div>
+
+                <div id="teamFields" style="display:none;">
+                    <div class="form-group">
+                        <input type="text" id="teamName" placeholder="Team Name">
+                        <input type="number" id="teamSize" placeholder="Size (2-6)">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Register Now</button>
+                <button type="reset" class="btn btn-alt">Clear Form</button>
+            </form>
+            <div id="msg"></div>
+            
+            <div id="displayArea" class="success-card" style="display:none;">
+                <h3>Last Submission Details</h3>
+                <div id="receipt"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Sports Meet</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

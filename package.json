@@ -1,0 +1,1 @@
+{"name":"mini-app","version":"1.0.0","main":"main.js","scripts":{"start":"electron ."},"dependencies":{"package-name":"^0.1.0"},"devDependencies":{"@electron-forge/cli":"^7.11.1","@electron/rebuild":"^4.0.4","electron":"^42.2.0"}}
