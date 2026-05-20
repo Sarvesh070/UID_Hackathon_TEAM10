@@ -172,11 +172,27 @@ input:focus {
     box-shadow: 0 0 20px rgba(230, 126, 34, 0.4);
 }
 
-/* --- Scrollbar --- */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { 
-    background: var(--glass-border); 
-    border-radius: 10px; 
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px; /* For horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg); /* Keeps it blending with your dark theme */
+}
+
+::-webkit-scrollbar-thumb {
+    /* Linear gradient from Dark Slate Gray to Dark Slate Blue */
+    background: linear-gradient(180deg, darkslategray 0%, darkslateblue 100%);
+    border-radius: 10px;
+    /* Adding a slight border creates a 'padding' effect, making it look sleeker */
+    border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    /* Slight brightness boost on hover to indicate interactivity */
+    filter: brightness(1.2);
+    background: linear-gradient(180deg, #3f5f5f 0%, #5b4e9e 100%);
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
